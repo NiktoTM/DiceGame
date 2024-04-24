@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/dice-6.png">
+  <title>Dice till you die</title>
+</head>
+
+<body>
+  <h1>Dice till you die</h1>
+  <main>
+    <section class="playerCards">
+      <!-- Spelare 1 -->
+      <div class="player player1 playerActive">
+        <h2 class="name" id="name1">Player 1</h2>
+        <p class="score" id="score1">0</p>
+        <div class="current">
+          <p class="currentLabel">Current</p>
+          <p class="currentScore" id="current1">0</p>
+        </div>
+      </div>
+      <!-- Spelare 2 -->
+      <div class="player player2">
+        <h2 class="name" id="name2">Player 2</h2>
+        <p class="score" id="score2">0</p>
+        <div class="current">
+          <p class="currentLabel">Current</p>
+          <p class="currentScore" id="current2">0</p>
+        </div>
+      </div>
+    </section>
+    <!-- Knappar -->
+    <img src="" alt="Playing dice" class="dice hidden" />
+    <button class="btn btnRoll">Roll dice</button>
+    <button class="btn btnHold">Hold</button>
+  </main>
+  <button class="btn btnNew">Restart</button>
+  <script src="script.js"></script>
+</body>
+</html>
