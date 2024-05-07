@@ -1,6 +1,6 @@
 'use strict';
 
-const winScore = 10;
+const winScore = 100;
 
 const score0Element = document.getElementById('score1');
 const score1Element = document.getElementById('score2');
