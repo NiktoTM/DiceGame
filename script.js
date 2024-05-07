@@ -1,6 +1,6 @@
 'use strict';
 
-const winScore = 100;
+const winScore = 10;
 
 const score0Element = document.getElementById('score1');
 const score1Element = document.getElementById('score2');
@@ -65,7 +65,6 @@ holdDice.addEventListener('click', function () {
     document.getElementById(`score${activePlayer + 1}`).textContent =
       scores[activePlayer];
 
-    //  Kollar om du har tillräckligt med poäng för att vinna
     if (scores[activePlayer] >= winScore) {
       playing = false;
       document
@@ -75,10 +74,26 @@ holdDice.addEventListener('click', function () {
         .querySelector(`.player${activePlayer + 1}`)
         .classList.remove('playerActive');
       diceImg.classList.add('hidden');
+      
+      // Display winner popup
+      const winnerPopup = document.createElement('div');
+      winnerPopup.classList.add('winner-popup');
+      winnerPopup.textContent = `Player ${activePlayer + 1} wins!`;
+      document.body.appendChild(winnerPopup);
     } else {
       playerSwitching();
     }
   }
 });
+
+newGame.addEventListener('click', function () {
+  const winnerPopup = document.querySelector('.winner-popup');
+  if (winnerPopup) {
+    winnerPopup.remove();
+  } 
+
+  init();
+});
+
 
 newGame.addEventListener('click', init);
