@@ -1,5 +1,6 @@
 'use strict';
 
+// Malte 
 const winScore = 100;
 
 const score0Element = document.getElementById('score1');
@@ -16,6 +17,7 @@ const holdDice = document.querySelector('.btnHold');
 
 let scores, currentScore, activePlayer, playing;
 
+// Christopher
 
 const init = function () {
   scores = [0, 0];
@@ -34,6 +36,8 @@ const init = function () {
 };
 
 init();
+
+// Kevin
 
 const playerSwitching = function () {
   document.getElementById(`current${activePlayer + 1}`).textContent = 0;
@@ -57,6 +61,8 @@ rollDice.addEventListener('click', function () {
     }
   }
 });
+
+// Maksym
 
 holdDice.addEventListener('click', function () {
   if (playing) {
@@ -85,6 +91,8 @@ holdDice.addEventListener('click', function () {
     }
   }
 });
+
+// Christopher
 
 newGame.addEventListener('click', function () {
   const winnerPopup = document.querySelector('.winner-popup');
